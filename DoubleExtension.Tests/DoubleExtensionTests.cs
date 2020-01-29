@@ -1,8 +1,8 @@
 using System;
 using NUnit.Framework;
-using static DoubleExtension.DoubleExtension;
+using static DoubleExtensions.DoubleExtension;
 
-namespace DoubleExtension.Tests
+namespace DoubleExtensions.Tests
 {
     public class Tests
     {

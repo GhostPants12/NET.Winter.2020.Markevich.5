@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace DoubleExtension
+namespace DoubleExtensions
 {
     public static class DoubleExtension
     {
@@ -17,7 +17,7 @@ namespace DoubleExtension
         public static string ToBinary(this double value)
         {
             Union union = new Union(value);
-            long bits = union.ToLong();
+            long bits = union.LongValue;
 
             return bits.ToBinary();
         }
@@ -63,9 +63,10 @@ namespace DoubleExtension
                 this.doubleValue = value;
             }
 
-            public static explicit operator long(Union obj) => obj.longValue;
-
-            public long ToLong() => this.longValue;
+            public long LongValue
+            {
+                get => this.longValue;
+            }
         }
     }
 }
